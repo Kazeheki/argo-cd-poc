@@ -31,8 +31,8 @@ Once you've installed all those tools, run
 (there might be problems with the first lines checking your tools if you use sh; Try bash in that case)
 
 This will set up a local kubernetes cluster, install Argo CD on it and set up the
-Argo CD applications [for "dev"](infra/app.yaml)
-and [for "prod"](infra/app.yaml).
+Argo CD applications [for "dev"](infra/application-dev.yaml)
+and [for "prod"](infra/application-prod.yaml).
 
 Next, enter
 
@@ -63,8 +63,8 @@ the changes in your local Argo CD, you'll have to change the following files:
 
 - [infra/helm/values.yaml](infra/helm/values.yaml) => `apps.a.repoUrl`
   and `apps.b.repoUrl`
-- [infra/app.yaml](infra/application-dev.yaml) => `spec.source.repoURL`
-- [infra/prod-app.yaml](infra/application-prod.yaml) => `spec.source.repoURL`
+- [infra/application-dev.yaml](infra/application-dev.yaml) => `spec.source.repoURL`
+- [infra/application-prod.yaml](infra/application-prod.yaml) => `spec.source.repoURL`
 
 Change the repoUrls to your own git-repository.
 
