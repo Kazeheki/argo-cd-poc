@@ -21,6 +21,7 @@ In order for this to work smoothly, I recommend you to fork this repository. The
 - helm (https://helm.sh/docs/intro/install/)
 - docker (https://docs.docker.com/engine/install/)
 - k3d (https://k3d.io/v5.3.0/#installation)
+- kubeseal (https://github.com/bitnami-labs/sealed-secrets/releases/tag/v0.17.3) (take more recent version if available)
 
 Once you've installed all those tools, run
 
