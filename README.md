@@ -61,8 +61,8 @@ the changes in your local Argo CD, you'll have to change the following files:
 
 - [infra/helm/values.yaml](infra/helm/values.yaml) => `apps.a.repoUrl`
   and `apps.b.repoUrl`
-- [infra/app.yaml](infra/app.yaml) => `spec.source.repoURL`
-- [infra/prod-app.yaml](infra/prod-app.yaml) => `spec.source.repoURL`
+- [infra/app.yaml](infra/application-dev.yaml) => `spec.source.repoURL`
+- [infra/prod-app.yaml](infra/application-prod.yaml) => `spec.source.repoURL`
 
 Change the repoUrls to your own git-repository.
 
@@ -163,7 +163,7 @@ spec:
 # ...
 ```
 
-_(state repo) values-prod.yaml_
+_(state repo) environment-values/prod.yaml_
 
 ```yaml
 app:
@@ -181,15 +181,16 @@ Example outline:
 <pre>
 |
 +-- helm
+|   +-- environment-values
+|   |   +-- dev.yaml
+|   |   +-- int.yaml
+|   |   +-- prod.yaml
 |   +-- templates
 |   |   +-- frontend.yaml
 |   |   +-- backend.yaml
 |   |   +-- what-ever-app-your-application-consists-of.yaml
 |   +-- Chart.yaml
 |   +-- values.yaml
-|   +-- values-dev.yaml
-|   +-- values-staging.yaml
-|   +-- values-prod.yaml
 +-- dev.yaml
 +-- staging.yaml
 +-- prod.yaml
