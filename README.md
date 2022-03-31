@@ -25,10 +25,9 @@ In order for this to work smoothly, I recommend you to fork this repository. The
 
 Once you've installed all those tools, run
 
-```bash
-./start.sh
+```shell
+./start
 ```
-(there might be problems with the first lines checking your tools if you use sh; Try bash in that case)
 
 This will set up a local kubernetes cluster, install Argo CD on it and set up the
 Argo CD applications [for "dev"](infra/application-dev.yaml)
